@@ -569,7 +569,7 @@
   #endif
 
   #define TEMP_BED_PIN       14   // ANALOG NUMBERING
-  #define FSR_PIN       15   // ANALOG NUMBERING - FSR Analog Input
+  #define FSR_PIN			 15   // ANALOG NUMBERING - FSR Analog Input
 
   #ifdef NUM_SERVOS
     #define SERVO0_PIN         11

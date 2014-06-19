@@ -1181,7 +1181,7 @@ ISR(TIMER0_COMPB_vect)
       #if defined(TEMP_2_PIN) && (TEMP_2_PIN > -1)
         raw_temp_2_value += ADC;
       #endif
-      temp_state = 0;
+      temp_state = 8;
       temp_count++;
       break;
 	case 8: // Prepare FSR
@@ -1198,7 +1198,7 @@ ISR(TIMER0_COMPB_vect)
 	  break;
 	case 9: // Measure FSR_VALUE
 	  #if defined(FSR_PIN) && (FSR_PIN > -1)
-		raw_fsr_sensor_sample = ADC;
+		raw_fsr_sensor_sample = ADC;		
 	  #endif
 		temp_state = 10;
 	  break;
