@@ -884,7 +884,7 @@ static void set_bed_level_equation(float z_at_xLeft_yFront, float z_at_xRight_yF
 #endif // ACCURATE_BED_LEVELING
 
 bool touching_print_surface(int threshold) {
-  return rawBedSample() < threshold;
+	return rawFSRSample() < threshold;
 }
 
 static void run_z_probe() {
@@ -896,7 +896,7 @@ static void run_z_probe() {
     float step = 0.05;
     int direction = -1;
     // Consider the glass touched if the raw ADC value is reduced by 5% or more.
-    int analog_fsr_untouched = rawBedSample();
+	int analog_fsr_untouched = rawFSRSample();
     int threshold = analog_fsr_untouched * 95L / 100;
     while (!touching_print_surface(threshold)) {
       destination[Z_AXIS] += step * direction;

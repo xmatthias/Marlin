@@ -50,6 +50,7 @@
 #define TEMP_2_PIN         -1   // MUST USE ANALOG INPUT NUMBERING NOT DIGITAL OUTPUT NUMBERING!!!!!!!!!
 #define HEATER_BED_PIN      4
 #define TEMP_BED_PIN       10
+#define FSR_PIN       -1   // ANALOG NUMBERING - FSR Analog Input
 
 #endif /* 99 */
 
@@ -98,6 +99,7 @@
 #define TEMP_1_PIN -1
 #define TEMP_2_PIN -1
 #define TEMP_BED_PIN 2
+#define FSR_PIN -1   // ANALOG NUMBERING - FSR Analog Input
 
 #define HEATER_0_PIN 4
 #define HEATER_1_PIN -1
@@ -182,6 +184,7 @@
 #define TEMP_1_PIN -1
 #define TEMP_2_PIN -1
 #define TEMP_BED_PIN 2
+#define FSR_PIN -1   // ANALOG NUMBERING - FSR Analog Input
 
 #define HEATER_0_PIN 4
 #define HEATER_1_PIN -1
@@ -263,6 +266,7 @@
 #define TEMP_1_PIN -1
 #define TEMP_2_PIN -1
 #define TEMP_BED_PIN 0
+#define FSR_PIN -1   // ANALOG NUMBERING - FSR Analog Input
 
 #define HEATER_0_PIN 4
 #define HEATER_1_PIN -1
@@ -331,6 +335,7 @@
     #define TEMP_1_PIN      -1
     #define TEMP_2_PIN      -1
     #define TEMP_BED_PIN        1   // MUST USE ANALOG INPUT NUMBERING NOT DIGITAL OUTPUT NUMBERING!!!!!!!!! (pin 34 bed)
+    #define FSR_PIN	 -1   // ANALOG NUMBERING - FSR Analog Input
 
     #define HEATER_0_PIN    4
     #define HEATER_1_PIN    -1
@@ -542,7 +547,7 @@
   #endif
 
   #define TEMP_0_PIN         13   // ANALOG NUMBERING
-  #define TEMP_1_PIN         15   // ANALOG NUMBERING
+  #define TEMP_1_PIN         -1   // ANALOG NUMBERING
   #if MOTHERBOARD == 68
     #define TEMP_2_PIN         12   // ANALOG NUMBERING
     #define TEMP_3_PIN         11   // ANALOG NUMBERING
@@ -564,6 +569,7 @@
   #endif
 
   #define TEMP_BED_PIN       14   // ANALOG NUMBERING
+  #define FSR_PIN			 15   // ANALOG NUMBERING - FSR Analog Input
 
   #ifdef NUM_SERVOS
     #define SERVO0_PIN         11
@@ -730,6 +736,7 @@
 #define TEMP_1_PIN          -1
 #define TEMP_2_PIN          -1
 #define TEMP_BED_PIN        1    // MUST USE ANALOG INPUT NUMBERING NOT DIGITAL OUTPUT NUMBERING!!!!!!!!!
+#define FSR_PIN	    -1   // ANALOG NUMBERING - FSR Analog Input
 
 #endif // MOTHERBOARD == 33 || MOTHERBOARD == 34 || MOTHERBOARD == 35 || MOTHERBOARD == 77
 
@@ -792,6 +799,7 @@
 #define TEMP_2_PIN          -1
 #define HEATER_BED_PIN      -1
 #define TEMP_BED_PIN        -1
+#define FSR_PIN	    -1   // ANALOG NUMBERING - FSR Analog Input
 
 #endif
 
@@ -853,6 +861,7 @@
 #define TEMP_1_PIN         2 	//ANALOG NUMBERING
 #define TEMP_2_PIN         1 	//ANALOG NUMBERING
 #define TEMP_BED_PIN       0	//ANALOG NUMBERING
+#define FSR_PIN	  -1   // ANALOG NUMBERING - FSR Analog Input
 
 #define BEEPER 		         36
 
@@ -969,7 +978,9 @@
     #else
     #define HEATER_BED_PIN   1    //changed @ rkoeppl 20110410
     #define TEMP_BED_PIN     0    //changed @ rkoeppl 20110410
+    
     #endif
+    #define FSR_PIN	 -1   // ANALOG NUMBERING - FSR Analog Input
     #define SDPOWER          -1
     #define SDSS          17
     #define LED_PIN         -1    //changed @ rkoeppl 20110410
@@ -1087,6 +1098,7 @@
 #define TEMP_1_PIN         -1
 #define TEMP_2_PIN         -1
 #define TEMP_BED_PIN        6   // MUST USE ANALOG INPUT NUMBERING NOT DIGITAL OUTPUT NUMBERING!!!!!!!!! (pin 34 bed)
+#define FSR_PIN	   -1   // ANALOG NUMBERING - FSR Analog Input
 #define SDPOWER            -1
 #define SDSS               31
 
@@ -1194,6 +1206,7 @@
 
 #define HEATER_BED_PIN 4
 #define TEMP_BED_PIN 10
+#define FSR_PIN -1   // ANALOG NUMBERING - FSR Analog Input
 
 #define HEATER_0_PIN  2
 #define TEMP_0_PIN 8
@@ -1297,6 +1310,7 @@
 
 #define HEATER_BED_PIN -1
 #define TEMP_BED_PIN -1
+#define FSR_PIN -1   // ANALOG NUMBERING - FSR Analog Input
 
 #define HEATER_0_PIN  2
 #define TEMP_0_PIN 8
@@ -1359,6 +1373,7 @@
 
 #define HEATER_BED_PIN 4
 #define TEMP_BED_PIN 10
+#define FSR_PIN -1   // ANALOG NUMBERING - FSR Analog Input
 
 #define HEATER_0_PIN  2
 #define TEMP_0_PIN 8
@@ -1516,6 +1531,7 @@
   #define TEMP_BED_PIN       11   // ANALOG NUMBERING - default connector for thermistor *THB* on rumba board is used
  #endif
 #endif
+#define FSR_PIN	   -1   // ANALOG NUMBERING - FSR Analog Input
 
 #define SDPOWER            -1
 #define SDSS               53
@@ -1580,6 +1596,7 @@
   #define Z_STOP_PIN         15
   #define TEMP_0_PIN          7  // Extruder / Analog pin numbering
   #define TEMP_BED_PIN        6  // Bed / Analog pin numbering
+  #define FSR_PIN	   -1   // ANALOG NUMBERING - FSR Analog Input
 #else  // Printrboard
   #define X_STOP_PIN         35
   #define Y_STOP_PIN          8
@@ -1587,6 +1604,7 @@
   #define Z_MIN_PIN          37  // Use E-STOP for autolevel Z probe
   #define TEMP_0_PIN          1  // Extruder / Analog pin numbering
   #define TEMP_BED_PIN        0  // Bed / Analog pin numbering
+  #define FSR_PIN	     -1   // ANALOG NUMBERING - FSR Analog Input
 #endif
 
 #define TEMP_1_PIN         -1
@@ -1654,6 +1672,7 @@
 #define TEMP_1_PIN         -1
 #define TEMP_2_PIN         -1
 #define TEMP_BED_PIN        6  // Bed / Analog pin numbering
+#define FSR_PIN	   -1   // ANALOG NUMBERING - FSR Analog Input
 
 #define SDPOWER            -1
 #define SDSS               -1
@@ -1719,6 +1738,7 @@
   #define Z_STOP_PIN         15
   #define TEMP_0_PIN          7  // Extruder / Analog pin numbering
   #define TEMP_BED_PIN        6  // Bed / Analog pin numbering
+  #define FSR_PIN -1   // ANALOG NUMBERING - FSR Analog Input
 
 #define TEMP_1_PIN         -1
 #define TEMP_2_PIN         -1
@@ -1890,6 +1910,7 @@
 #define TEMP_2_PIN         -1 // 2
 #define HEATER_BED_PIN     -1 // 14/15
 #define TEMP_BED_PIN       -1 // 1,2 or I2C
+#define FSR_PIN       -1   // ANALOG NUMBERING - FSR Analog Input
 /*  Unused (1) (2) (3) 4 5 6 7 8 9 10 11 12 13 (14) (15) (16) 17 (18) (19) (20) (21) (22) (23) 24 (25) (26) (27) 28 (29) (30) (31)  */
 
 #endif
@@ -1954,6 +1975,7 @@
 #define TEMP_2_PIN         -1 // 2
 #define HEATER_BED_PIN      4
 #define TEMP_BED_PIN        2 // 1,2 or I2C
+#define FSR_PIN		-1   // ANALOG NUMBERING - FSR Analog Input
 
 #define I2C_SCL       16
 #define I2C_SDA       17
@@ -1998,6 +2020,7 @@
 
 #define HEATER_BED_PIN 3
 #define TEMP_BED_PIN 2
+#define FSR_PIN -1   // ANALOG NUMBERING - FSR Analog Input
 
 #define HEATER_0_PIN  9
 #define TEMP_0_PIN 0
@@ -2167,7 +2190,7 @@
 #define TEMP_2_PIN         -1   // ANALOG NUMBERING
 #define HEATER_BED_PIN     10   // BED
 #define TEMP_BED_PIN       14   // ANALOG NUMBERING
-
+#define FSR_PIN       -1   // ANALOG NUMBERING - FSR Analog Input
 #define BEEPER 33     // Beeper on AUX-4
 
 
@@ -2283,7 +2306,7 @@
  #else
    #define TEMP_BED_PIN 14 // ANALOG NUMBERING
  #endif
-
+ #define FSR_PIN       -1   // ANALOG NUMBERING - FSR Analog Input
  #define BEEPER 64
 
 
@@ -2379,6 +2402,7 @@
 
  #define HEATER_BED_PIN 3 // BED
  #define TEMP_BED_PIN 6 // ANALOG NUMBERING
+ #define FSR_PIN       -1   // ANALOG NUMBERING - FSR Analog Input
 
  #define BEEPER -1
 
@@ -2482,6 +2506,7 @@
  #define TEMP_1_PIN 14
  #define TEMP_2_PIN -1
  #define TEMP_BED_PIN 13
+ #define FSR_PIN       -1   // ANALOG NUMBERING - FSR Analog Input
 
  //Cheaptronic v1.0 dont support LCD
  #define LCD_PINS_RS -1
@@ -2575,6 +2600,6 @@
 #define SENSITIVE_PINS {0, 1, X_STEP_PIN, X_DIR_PIN, X_ENABLE_PIN, X_MIN_PIN, X_MAX_PIN, Y_STEP_PIN, Y_DIR_PIN, Y_ENABLE_PIN, Y_MIN_PIN, Y_MAX_PIN, Z_STEP_PIN, Z_DIR_PIN, Z_ENABLE_PIN, Z_MIN_PIN, Z_MAX_PIN, PS_ON_PIN, \
                         HEATER_BED_PIN, FAN_PIN,                  \
                         _E0_PINS _E1_PINS _E2_PINS             \
-                        analogInputToDigitalPin(TEMP_0_PIN), analogInputToDigitalPin(TEMP_1_PIN), analogInputToDigitalPin(TEMP_2_PIN), analogInputToDigitalPin(TEMP_BED_PIN) }
+                        analogInputToDigitalPin(TEMP_0_PIN), analogInputToDigitalPin(TEMP_1_PIN), analogInputToDigitalPin(TEMP_2_PIN), analogInputToDigitalPin(TEMP_BED_PIN), analogInputToDigitalPin(FSR_PIN)}
 #endif
 
