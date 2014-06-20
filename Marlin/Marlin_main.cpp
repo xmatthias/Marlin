@@ -884,7 +884,11 @@ static void set_bed_level_equation(float z_at_xLeft_yFront, float z_at_xRight_yF
 #endif // ACCURATE_BED_LEVELING
 
 bool touching_print_surface(int threshold) {
+  #ifdef FSR_ANALOG_READ
 	return rawFSRSample() < threshold;
+  #else
+	return READ(Z_MIN_PIN) < threshold;
+  #endif
 }
 
 static void run_z_probe() {
@@ -895,9 +899,14 @@ static void run_z_probe() {
     feedrate = 600; //mm/min
     float step = 0.05;
     int direction = -1;
-    // Consider the glass touched if the raw ADC value is reduced by 5% or more.
-	int analog_fsr_untouched = rawFSRSample();
-    int threshold = analog_fsr_untouched * 95L / 100;
+	
+	#ifdef FSR_ANALOG_READ
+      // Consider the glass touched if the raw ADC value is reduced by 5% or more.
+	  int analog_fsr_untouched = rawFSRSample();
+      int threshold = analog_fsr_untouched * 95L / 100;
+    #else 
+	  int threshold=1;
+    #endif
     while (!touching_print_surface(threshold)) {
       destination[Z_AXIS] += step * direction;
       prepare_move_raw();
@@ -1106,7 +1115,7 @@ static float probe_pt(float x, float y, float z_before) {
   SERIAL_PROTOCOL(measured_z);
 #ifdef FSR_BED_LEVELING
   SERIAL_PROTOCOLPGM(" FSR: ");
-  SERIAL_PROTOCOL(rawBedSample());
+  SERIAL_PROTOCOL(rawFSRSample());
 #endif
   SERIAL_PROTOCOLPGM("\n");
   return measured_z;
