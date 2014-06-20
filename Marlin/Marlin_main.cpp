@@ -1106,7 +1106,7 @@ static float probe_pt(float x, float y, float z_before) {
   SERIAL_PROTOCOL(measured_z);
 #ifdef FSR_BED_LEVELING
   SERIAL_PROTOCOLPGM(" FSR: ");
-  SERIAL_PROTOCOL(rawBedSample());
+  SERIAL_PROTOCOL(rawFSRSample());
 #endif
   SERIAL_PROTOCOLPGM("\n");
   return measured_z;
