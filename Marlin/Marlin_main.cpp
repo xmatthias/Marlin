@@ -903,7 +903,7 @@ static void run_z_probe() {
 	#ifdef FSR_ANALOG_READ
       // Consider the glass touched if the raw ADC value is reduced by 5% or more.
 	  int analog_fsr_untouched = rawFSRSample();
-      int threshold = analog_fsr_untouched * 95L / 100;
+      int threshold = analog_fsr_untouched * 98L / 100;
     #else 
 	  int threshold=1;
     #endif
