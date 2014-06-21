@@ -445,7 +445,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
   // Autolevel by measuring how much the hotend is pushing down, without separate Z probe.
   #define FSR_BED_LEVELING
   //define that FSR should use Analog Input (defined by FSR_PIN) Is this not defined, Z_MIN_PIN will be used (Digital Input!)
-  //#define FSR_ANALOG_READ
+  #define FSR_ANALOG_READ
 #endif
 
 
