@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sshadress=pi@192.168.1.41
-sshport=10022
+sshadress=pi@192.168.1.39
+sshport=9022
 filepath=Marlin/applet
 filename=Marlin.hex
 
